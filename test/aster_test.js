@@ -25,6 +25,6 @@ function createTest(name) {
   };
 }
 
-exports.aster = ['default_options', 'custom_options'].reduce(function (tests, name) {
-  tests[name] = createTest(name);
-}, {});
+['default_options', 'custom_options'].forEach(function (name) {
+  exports[name] = createTest(name);
+});
